@@ -14,7 +14,8 @@ const userSchema = new Schema({
   username: String,
   addresses: [
     {
-      
+      location: String,
+      city : String,
     }
   ]
 })
