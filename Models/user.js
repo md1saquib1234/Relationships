@@ -11,5 +11,10 @@ async function main() {
 }
 
 const userSchema = new Schema({
-  username: String;
+  username: String,
+  addresses: [
+    {
+      
+    }
+  ]
 })
