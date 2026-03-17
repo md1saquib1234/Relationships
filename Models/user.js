@@ -21,3 +21,29 @@ const userSchema = new Schema({
     },
   ],
 });
+
+const User = mongoose.model('User', userSchema);
+
+const addUsers = async () => {
+  let user1 = new User(
+    {
+      username: "John Doe",
+      addrresses: [
+        {
+          location: "123 Main st",
+          city: "London"
+        }
+      ] 
+    })
+
+    user1.addresses.push({
+      location: "456 Main st",
+      city: "Paris"
+    });
+
+    await user1.save();
+    let result = await user1.save();
+    console.log(result);
+}
+
+addUsers();
