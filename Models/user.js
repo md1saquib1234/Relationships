@@ -12,6 +12,7 @@ main().
   await mongoose.connect('mongodb://localhost:27017/relationDemo');
 }
 
+
 const userSchema = new Schema({
   username: String,
   addresses: [
@@ -46,7 +47,7 @@ const addUsers = async () => {
     await user1.save();
     let result = await user1.save();
     console.log(result);
-    
+
 }
 
 addUsers();
