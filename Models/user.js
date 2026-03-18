@@ -46,6 +46,7 @@ const addUsers = async () => {
     await user1.save();
     let result = await user1.save();
     console.log(result);
+    
 }
 
 addUsers();
