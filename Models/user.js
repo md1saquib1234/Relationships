@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-
 main().
  then(console.log("Connection successful")).catch(err => console.log(err));
 
