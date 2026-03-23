@@ -38,7 +38,7 @@ const addUsers = async () => {
 
     user1.addresses.push({
       location: "456 Main st",
-      city: "Paris"
+      // city: "Paris"
     });
 
     await user1.save();
