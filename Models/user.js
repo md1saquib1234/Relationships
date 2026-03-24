@@ -49,4 +49,3 @@ const addUsers = async () => {
 
 addUsers();
 
-// Testing comment
