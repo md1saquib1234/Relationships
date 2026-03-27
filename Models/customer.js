@@ -10,3 +10,6 @@ main().
   await mongoose.connect('mongodb://localhost:27017/relationDemo');
 }
 
+const orderSchema = new Schema({
+  username: String,
+})
