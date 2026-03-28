@@ -11,5 +11,12 @@ main().
 }
 
 const orderSchema = new Schema({
-  username: String,
-})
+  item: String,
+  price: Number,
+});
+
+const Order = mongoose.model('Order', orderSchema);
+
+const addOrders = async () => {
+  await Order.insertMany();
+}
