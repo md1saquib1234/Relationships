@@ -18,10 +18,12 @@ const orderSchema = new Schema({
 const Order = mongoose.model('Order', orderSchema);
 
 const addOrders = async () => {
-  let res = await Order.insertMany(
+  let res = await Order.insertMany([
   { item: "Samosa", price: 10},
   { item: "Chips", price: 10},
   { item: "Chocolate", price: 40}
-  );
+  ]);
   console.log(res);
 };
+
+addOrders();
