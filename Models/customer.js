@@ -1,14 +1,20 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-
-
-main().
- then(console.log("Connection successful")).catch(err => console.log(err));
+const {Schema} = mongoose;
 
  async function main() {
+  try {
   await mongoose.connect('mongodb://localhost:27017/relationDemo');
+  console.log("Connection successful");
+
+  await addOrders();
+
+  } catch (err) {
+    console.log("Error: ", err);
+  }
+  
 }
+
+main();
 
 const orderSchema = new Schema({
   item: String,
@@ -26,4 +32,3 @@ const addOrders = async () => {
   console.log(res);
 };
 
-addOrders();
