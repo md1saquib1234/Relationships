@@ -28,7 +28,7 @@ const customerSchema = new Schema({
 const Order = mongoose.model("Order", orderSchema);
 const Customer = mongoose.model("Customer", customerSchema);
 
-const addCustomer = async () => {
+const findCustomer = async () => {
   // let cust1 = new Customer({
   //   name : "Rahul Kumar",
   // });
@@ -42,11 +42,11 @@ const addCustomer = async () => {
   // let result = await cust1.save();
   // console.log(result);
 
-  let result = await Customer.find({});
-  console.log(result);
+  let result = await Customer.find({}).populate("orders");
+  console.log(result[0]);
 };
 
-addCustomer();
+findCustomer();
 
 // const addOrders = async () => {
 //   let res = await Order.insertMany([
