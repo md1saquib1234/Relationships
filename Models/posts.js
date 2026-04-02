@@ -27,21 +27,26 @@ const postSchema = new Schema({
 const User = mongoose.model("User", userSchema);
 const Post = mongoose.model("Post", postSchema);
 
-const addData = async () => {
-  let user1 = new User({
-    username: "Rahul kumar",
-    email : "rahul@gmail.com"
-  });
+// const addData = async () => {
+//   let user = await User.findOne({username: "rahulkumar"});
 
-  let post1 = new Post({
-    content: "Hello world",
-    likes: 7
-  });
+//   let post2 = new Post({
+//     content: "Bye Bye",
+//     likes: 23,
+//   });
 
-  post1.user = user1;
+//   post2.user = user;
 
-  await user1.save();
-  await post1.save();
+
+//   await post2.save();
+// };
+
+// addData();
+
+const del = async () => {
+  await Post.findByIdAndDelete('69b93e081a278f8a16787906');
+  await User.findByIdAndDelete('69ce3b4ac053236d37d3bf06');
+
 };
 
-addData();
+del();
