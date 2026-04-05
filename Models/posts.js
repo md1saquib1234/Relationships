@@ -41,8 +41,8 @@ const addData = async () => {
   await post2.save();
 };
 
-addData();
 
+addData();
 
 // const del = async () => {
 //   await Post.findByIdAndDelete('69b93e081a278f8a16787906');
