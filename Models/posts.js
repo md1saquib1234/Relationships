@@ -43,10 +43,10 @@ const addData = async () => {
 
 addData();
 
-// const del = async () => {
-//   await Post.findByIdAndDelete('69b93e081a278f8a16787906');
-//   await User.findByIdAndDelete('69ce3b4ac053236d37d3bf06');
+const del = async () => {
+  await Post.findByIdAndDelete('69b93e081a278f8a16787906');
+  await User.findByIdAndDelete('69ce3b4ac053236d37d3bf06');
 
-// };
+};
 
-// del();
+del();
