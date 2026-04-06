@@ -41,7 +41,6 @@ const addData = async () => {
   await post2.save();
 };
 
-
 addData();
 
 // const del = async () => {
