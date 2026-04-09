@@ -41,7 +41,7 @@ const addData = async () => {
   await post2.save();
 };
 
-
+// Create a post and associate it with a user
 addData();
 
 // const del = async () => {
