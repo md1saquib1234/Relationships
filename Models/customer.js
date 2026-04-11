@@ -77,3 +77,12 @@ const addCustomer = async () => {
 
   console.log("added new customer");
 };
+
+const delCust = async () => {
+  let data = await Customer.findByIdAndDelete('69d9f8cbf3b62b82ec557f8f');
+  console.log(data);
+}
+
+// addCustomer();
+delCust();
+
