@@ -64,4 +64,16 @@ const addCustomer = async () => {
   let newCust = new Customer({
     name: "Karan Arjun",
   });
-}
+
+  let newOrder = new Order({
+    item: "Pizza",
+    price: 100
+  });
+
+  newCust.orders.push(newOrder);
+
+  await newOrder.save();
+  await newCust.save();
+
+  console.log("added new customer");
+};
