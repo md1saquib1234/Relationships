@@ -59,3 +59,9 @@ findCustomer();
 // };
 
 // addOrders();
+
+const addCustomer = async () => {
+  let newCust = new Customer({
+    name: "Karan Arjun",
+  });
+}
