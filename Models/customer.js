@@ -25,8 +25,12 @@ const customerSchema = new Schema({
   ]
 });
 
-Schema.pre("findOneAndDelete", async () => {
-  console.log("POST MIDDLEWARE");
+// customerSchema.pre("findOneAndDelete", async () => {
+//   console.log("PRE MIDDLEWARE");
+// });
+
+customerSchema.post("findOneAndDelete", async () => {
+  console.log(data);
 });
 
 
@@ -70,8 +74,8 @@ const addCustomer = async () => {
   });
 
   let newOrder = new Order({
-    item: "Pizza",
-    price: 100
+    item: "Burger",
+    price: 250,
   });
 
   newCust.orders.push(newOrder);
@@ -83,10 +87,10 @@ const addCustomer = async () => {
 };
 
 const delCust = async () => {
-  let data = await Customer.findByIdAndDelete('69d9f8cbf3b62b82ec557f8f');
+  let data = await Customer.findByIdAndDelete('69cbb179d8883e7277e240af');
   console.log(data);
 }
 
-// addCustomer();
+//  addCustomer();
 delCust();
 
