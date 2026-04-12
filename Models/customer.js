@@ -25,6 +25,10 @@ const customerSchema = new Schema({
   ]
 });
 
+Schema.pre("findOneAndDelete", async () => {
+  console.log("POST MIDDLEWARE");
+});
+
 
 const Order = mongoose.model("Order", orderSchema);
 const Customer = mongoose.model("Customer", customerSchema);
