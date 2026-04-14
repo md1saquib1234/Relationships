@@ -30,7 +30,7 @@ const customerSchema = new Schema({
 // });
 
 customerSchema.post("findOneAndDelete", async () => {
-  console.log("POST MIDDLEWARE");
+  console.log("POST MIDDLEWAR");
 });
 
 
