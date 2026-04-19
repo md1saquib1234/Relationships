@@ -30,7 +30,9 @@ const customerSchema = new Schema({
 // });
 
 customerSchema.post("findOneAndDelete", async () => {
-  console.log("Post middleware");
+  if(customerSchema.orders.length) {
+    Order.deleteMany({_id: {$in: customerSchema.orders}})
+  }
 });
 
 
