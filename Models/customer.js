@@ -29,12 +29,7 @@ const customerSchema = new Schema({
 //   console.log("PRE MIDDLEWARE");
 // });
 
-customerSchema.post("findOneAndDelete", async () => {
-  if(customerSchema.orders.length) {
-   let res =  await Order.deleteMany({_id: {$in: customerSchema.orders}});
-   console.log(res);
-  }
-});
+
 
 
 const Order = mongoose.model("Order", orderSchema);
