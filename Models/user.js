@@ -9,6 +9,7 @@ main().
   await mongoose.connect('mongodb://localhost:27017/relationDemo');
 }
 
+
 // Define the User schema with an array of addressess
 const userSchema = new Schema({
   username: String,
