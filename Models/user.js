@@ -10,7 +10,7 @@ main().
 }
 
 
-// Define the User schema with an array of addressess
+
 const userSchema = new Schema({
   username: String,
   addresses: [
