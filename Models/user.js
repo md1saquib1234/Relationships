@@ -17,6 +17,7 @@ const userSchema = new Schema({
     { 
       _id: false,
       location: String,
+      
       city : String,
     },
   ],
