@@ -14,7 +14,6 @@ main().
 const userSchema = new Schema({
   username: String,
   addresses: [
-    
     { 
       _id: false,
       location: String,
@@ -33,6 +32,7 @@ const addUsers = async () => {
         {
           
           location: "123 Main st",
+          
           city: "London"
         }
       ] 
