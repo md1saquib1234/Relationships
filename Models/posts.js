@@ -23,7 +23,6 @@ const postSchema = new Schema({
     ref: "User"
   }
 });
-
 const User = mongoose.model("User", userSchema);
 const Post = mongoose.model("Post", postSchema);
 
@@ -51,7 +50,6 @@ const Post = mongoose.model("Post", postSchema);
 // };
 
 // del();
-
 const getData = async () => {
   let result = await Post.findOne({}).populate("user", "username");
 };

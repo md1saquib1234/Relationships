@@ -53,7 +53,6 @@ const findCustomer = async () => {
   console.log(result[0]);
 };
 
-
 findCustomer();
 
 // const addOrders = async () => {
@@ -66,7 +65,6 @@ findCustomer();
 // };
 
 // addOrders();
-
 const addCustomer = async () => {
   let newCust = new Customer({
     name: "Karan Arjun",
