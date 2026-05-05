@@ -45,6 +45,5 @@ const addUsers = async () => {
     let result = await user1.save();
     console.log(result);
 }
-
 addUsers();
 

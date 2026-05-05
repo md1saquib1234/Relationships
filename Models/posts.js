@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-
 main()
    .then(() => console.log("connection successful"))
    .catch((err) => console.log(err));
@@ -9,7 +8,6 @@ main()
 async function main() {
   await mongoose.connect('mongodb://localhost:27017/relationDemo');
 }
-
 const userSchema = new Schema({
   username: String,
   email: String
