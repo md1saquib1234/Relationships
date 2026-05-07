@@ -8,7 +8,7 @@ main().
   await mongoose.connect('mongodb://localhost:27017/relationDemo');
 }
 
-// Define the Order Schema 
+
 const orderSchema = new Schema({
   item: String,
   price: Number,
