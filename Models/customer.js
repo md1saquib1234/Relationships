@@ -14,7 +14,7 @@ const orderSchema = new Schema({
   price: Number,
 });
 
-// Define the Customer Schema with an array of orders
+
 const customerSchema = new Schema({
   name: String,
   orders: [
