@@ -88,6 +88,6 @@ const delCust = async () => {
   console.log(data);
 }
 
-
+//del
 delCust();
 
